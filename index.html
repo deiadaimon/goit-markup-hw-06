@@ -32,7 +32,7 @@
           <a class="link logo top" href="./index.html"
             >Web<span class="logo-dark">Studio</span></a
           >
-          <ul class="menu">
+          <ul class="nav-menu">
             <li>
               <a class="link nav-link current" href="./index.html">Studio</a>
             </li>
@@ -40,8 +40,17 @@
             <li><a class="link nav-link" href="">Contacts</a></li>
           </ul>
         </nav>
+        <button class="mobile-btn" type="button">
+          <svg class="mobile-btn-icon">
+            <use
+              href="./images/icons.svg#icon-mobile-menu"
+              width="24"
+              height="24"
+            ></use>
+          </svg>
+        </button>
         <address class="contacts">
-          <ul class="menu">
+          <ul class="contacts-menu">
             <li>
               <a class="link contact-link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
@@ -696,5 +705,27 @@
         </form>
       </div>
     </div> -->
+
+    <!-- mobile menu -->
+    <div class="mobile-menu">
+      <div class="container mobile-menu-container">
+        <button class="close-mobile-btn" type="button">
+          <svg class="close-mobile-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav>
+          <ul class="mobile-navigation">
+            <li>
+              <a class="link mobile-nav-link current" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li><a class="link mobile-nav-link" href="">Portfolio</a></li>
+            <li><a class="link mobile-nav-link" href="">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </body>
 </html>
