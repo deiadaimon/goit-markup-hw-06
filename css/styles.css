@@ -65,8 +65,10 @@ img {
   background-color: var(--ocean);
 }
 .container {
+  width: 320px;
   padding-left: 16px;
   padding-right: 16px;
+  margin: 0 auto;
 }
 .logo {
   color: var(--iris);
@@ -111,13 +113,6 @@ img {
 /* ========== /COMMON STYLES ========== */
 
 /* ========== MOBILE STYLES ========== */
-@media screen and (min-width: 480px) {
-  .container {
-    width: 320px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 /* header styles */
 .page-header {
@@ -210,6 +205,8 @@ img {
   background-position: center;
   background-size: cover;
   padding: 72px 0;
+  max-width: 320px;
+  margin: 0 auto;
 }
 @media screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px),
@@ -232,6 +229,7 @@ img {
       ),
       url(../images/hero-bg-image-tablet.jpg);
     padding: 112px 0;
+    max-width: 768px;
   }
 }
 @media screen and (min-resolution: 192dpi) and (min-width: 768px),
@@ -330,11 +328,12 @@ img {
 .team-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 72px;
 }
 .team-card {
+  width: 264px;
   background-color: var(--white);
-
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -502,7 +501,7 @@ input::placeholder {
 }
 .form-btn {
   display: flex;
-  max-width: 165px;
+  min-width: 165px;
   height: 40px;
   border: none;
   border-radius: 4px;
@@ -517,6 +516,7 @@ input::placeholder {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+  margin: 0 auto;
 }
 .submit {
   fill: var(--white);
@@ -527,11 +527,14 @@ input::placeholder {
 /* ========== TABLET STYLES ========== */
 @media screen and (min-width: 768px) {
   .container {
-    width: 736px;
-    padding: 0;
+    width: 768px;
+    padding: 0 16px;
   }
 
   /* header styles */
+  .page-header {
+    padding: 0;
+  }
   .navigation {
     display: flex;
     align-items: center;
@@ -622,9 +625,6 @@ input::placeholder {
     column-gap: 24px;
     row-gap: 64px;
   }
-  .team-card {
-    width: calc((100% - 1 * 24px) / 2);
-  }
 
   /* our portfolio styles */
   .projects-list {
@@ -648,6 +648,9 @@ input::placeholder {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
+  }
+  .footer-text {
+    margin: 0;
   }
   .form {
     flex-direction: row;
@@ -732,6 +735,9 @@ input::placeholder {
   /* our portfolio styles */
   .projects {
     padding: 120px 0;
+  }
+  .projects-list {
+    row-gap: 48px;
   }
   .project-card {
     width: calc((100% - 2 * 24px) / 3);
